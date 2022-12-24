@@ -11,21 +11,25 @@ export default class App extends Component {
   }
 
   increaseCount() {
-    this.setState((state) => {
-      return {
-        ...state,
-        count: ++state.count
-      }
-    })
+    if(this.state.count < 10) {
+      this.setState((state) => {
+        return {
+          ...state,
+          count: ++state.count
+        }
+      })
+    }
   }
 
   decreaseCount() {
-    this.setState((state) => {
-      return {
-        ...state,
-        count: --state.count
-      }
-    })
+    if(this.state.count > 0) {
+      this.setState((state) => {
+        return {
+          ...state,
+          count: --state.count
+        }
+      })
+    }
   }
   
   render() {
