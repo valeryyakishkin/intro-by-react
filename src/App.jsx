@@ -10,6 +10,10 @@ export default class App extends Component {
     }
   }
 
+  test() {
+    console.log("test");
+  }
+
   increaseCount() {
     if(this.state.count < 10) {
       this.setState((state) => {
